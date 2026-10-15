@@ -20,4 +20,6 @@ progress { width: 100%; height: 12px; margin-top: 24px; accent-color: #f4c65d; }
 footer { height: 44px; padding: 0 16px; display: flex; align-items: center; justify-content: space-between; gap: 12px; font-size: 12px; }
 #fullscreen { background: transparent; color: #f4c65d; padding: 8px 12px; }
 #stage:fullscreen { height: 100%; width: 100%; background: #102f46; }
+#exit-fullscreen { display: none; }
+#stage:fullscreen #exit-fullscreen { display: block; position: absolute; top: 10px; right: 10px; padding: 10px; background: #102f46; color: #f4c65d; }
 @media (max-height: 520px) { .intro { width: min(520px, 100%); } h1 { margin: 4px 0; font-size: 28px; } p { margin: 8px 0; } .note { display: none; } }

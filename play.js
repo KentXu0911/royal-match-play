@@ -61,5 +61,9 @@ fullscreen.addEventListener("click", async () => {
     canvas.focus();
   } catch (error) { console.warn("全屏不可用", error); }
 });
+document.getElementById("exit-fullscreen").addEventListener("click", async () => {
+  if (document.fullscreenElement) await document.exitFullscreen();
+  canvas.focus();
+});
 canvas.addEventListener("pointerdown", () => canvas.focus());
 canvas.addEventListener("contextmenu", event => event.preventDefault());
