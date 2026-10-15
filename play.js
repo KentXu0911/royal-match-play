@@ -28,7 +28,7 @@ start.addEventListener("click", async () => {
   statusText.textContent = "正在下载游戏资源…";
   try {
     if (!canvas.getContext("webgl2")) throw new Error("当前浏览器无法启用 WebGL 2，请使用支持硬件加速的浏览器。" );
-    const response = await fetch("game-config.json");
+    const response = await fetch("game-config.json", { cache: "no-store" });
     if (!response.ok) throw new Error("无法读取游戏配置，请刷新重试。" );
     const config = await response.json();
     await loadScript(config.loader);

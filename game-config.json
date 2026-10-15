@@ -1,12 +1,13 @@
 {
-  "loader": "Build/site.loader.js",
+  "loader": "Build/site.loader.js?v=20261015-lock-no-caption-3a2686c0",
   "unity": {
-    "dataUrl": "Build/site.data.unityweb",
-    "frameworkUrl": "Build/site.framework.js.unityweb",
-    "codeUrl": "Build/site.wasm.unityweb",
+    "dataUrl": "Build/site.data.unityweb?v=20261015-lock-no-caption-3a2686c0",
+    "frameworkUrl": "Build/site.framework.js.unityweb?v=20261015-lock-no-caption-3a2686c0",
+    "codeUrl": "Build/site.wasm.unityweb?v=20261015-lock-no-caption-3a2686c0",
     "streamingAssetsUrl": "StreamingAssets",
     "companyName": "RoyalMatchPlaytest",
     "productName": "Royal Match 1-20",
     "productVersion": "1.0"
-  }
+  },
+  "version": "20261015-lock-no-caption-3a2686c0"
 }
