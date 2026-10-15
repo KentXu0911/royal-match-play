@@ -1,22 +1,22 @@
 {
-  "loader": "Build/site.loader.js?v=20261015-ui-alignment-33e1ba19",
+  "loader": "Build/site.loader.js?v=20261015-commerce-win-ui-76086599",
   "unity": {
-    "frameworkUrl": "Build/site.framework.js.unityweb?v=20261015-ui-alignment-33e1ba19",
-    "codeUrl": "Build/site.wasm.unityweb?v=20261015-ui-alignment-33e1ba19",
+    "frameworkUrl": "Build/site.framework.js.unityweb?v=20261015-commerce-win-ui-76086599",
+    "codeUrl": "Build/site.wasm.unityweb?v=20261015-commerce-win-ui-76086599",
     "streamingAssetsUrl": "StreamingAssets",
     "companyName": "RoyalMatchPlaytest",
     "productName": "Royal Match 1-20",
     "productVersion": "1.0"
   },
-  "version": "20261015-ui-alignment-33e1ba19",
+  "version": "20261015-commerce-win-ui-76086599",
   "dataChunks": [
     {
-      "url": "Build/site.data.part0.unityweb?v=20261015-ui-alignment-33e1ba19",
+      "url": "Build/site.data.part0.unityweb?v=20261015-commerce-win-ui-76086599",
       "bytes": 67108864
     },
     {
-      "url": "Build/site.data.part1.unityweb?v=20261015-ui-alignment-33e1ba19",
-      "bytes": 56636843
+      "url": "Build/site.data.part1.unityweb?v=20261015-commerce-win-ui-76086599",
+      "bytes": 58453776
     }
   ]
 }
