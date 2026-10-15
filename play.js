@@ -26,19 +26,39 @@ start.addEventListener("click", async () => {
   progress.hidden = false;
   window.playtest.state = "loading";
   statusText.textContent = "正在下载游戏资源…";
+  let dataBlobUrl;
   try {
     if (!canvas.getContext("webgl2")) throw new Error("当前浏览器无法启用 WebGL 2，请使用支持硬件加速的浏览器。" );
     const response = await fetch("game-config.json", { cache: "no-store" });
     if (!response.ok) throw new Error("无法读取游戏配置，请刷新重试。" );
     const config = await response.json();
+    if (Array.isArray(config.dataChunks) && config.dataChunks.length) {
+      let received = 0;
+      const total = config.dataChunks.reduce((sum, part) => sum + part.bytes, 0);
+      const parts = await Promise.all(config.dataChunks.map(async part => {
+        const download = await fetch(part.url);
+        if (!download.ok) throw new Error("游戏资源下载失败，请刷新重试。");
+        const bytes = await download.arrayBuffer();
+        if (bytes.byteLength !== part.bytes) throw new Error("游戏资源下载不完整，请刷新重试。");
+        received += bytes.byteLength;
+        progress.value = received / total * 0.65;
+        statusText.textContent = `正在加载游戏… ${Math.round(progress.value * 100)}%`;
+        return bytes;
+      }));
+      dataBlobUrl = URL.createObjectURL(new Blob(parts, { type: "application/octet-stream" }));
+      config.unity.dataUrl = dataBlobUrl;
+      // Versioned chunks use normal HTTP caching; a temporary Blob must not
+      // become a new persistent Unity cache entry every time the page opens.
+      config.unity.cacheControl = () => "no-store";
+    }
     await loadScript(config.loader);
     config.unity.devicePixelRatio = Math.min(window.devicePixelRatio || 1, 2);
     config.unity.showBanner = (message, type) => {
       if (type === "error") { window.playtest.errors.push(message); statusText.textContent = message; }
     };
     window.unityInstance = await createUnityInstance(canvas, config.unity, value => {
-      progress.value = value;
-      statusText.textContent = value < 0.9 ? `正在加载游戏… ${Math.round(value * 100)}%` : "正在准备棋盘…";
+      progress.value = dataBlobUrl ? 0.65 + value * 0.35 : value;
+      statusText.textContent = value < 0.9 ? `正在加载游戏… ${Math.round(progress.value * 100)}%` : "正在准备棋盘…";
     });
     window.playtest.state = "running";
     cover.hidden = true;
@@ -52,6 +72,8 @@ start.addEventListener("click", async () => {
     start.disabled = false;
     start.textContent = "刷新重试";
     progress.hidden = true;
+  } finally {
+    if (dataBlobUrl) URL.revokeObjectURL(dataBlobUrl);
   }
 });
 fullscreen.addEventListener("click", async () => {
