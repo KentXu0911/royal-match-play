@@ -1,78 +1,82 @@
 {
-  "loader": "Build/site.loader.js?v=20261016-audio-fix-bd6e4e5e",
+  "loader": "Build/site.loader.js?v=20261016-full-fixes-8bbd7f49",
   "unity": {
-    "frameworkUrl": "Build/site.framework.js.unityweb?v=20261016-audio-fix-bd6e4e5e",
-    "codeUrl": "Build/site.wasm.unityweb?v=20261016-audio-fix-bd6e4e5e",
+    "frameworkUrl": "Build/site.framework.js.unityweb?v=20261016-full-fixes-8bbd7f49",
+    "codeUrl": "Build/site.wasm.unityweb?v=20261016-full-fixes-8bbd7f49",
     "streamingAssetsUrl": "StreamingAssets",
     "companyName": "RoyalMatchPlaytest",
     "productName": "Royal Match 1-20",
     "productVersion": "1.0"
   },
-  "version": "20261016-audio-fix-bd6e4e5e",
+  "version": "20261016-full-fixes-8bbd7f49",
   "dataChunks": [
     {
-      "url": "Build/site.data.part0.unityweb?v=20261016-audio-fix-bd6e4e5e",
+      "url": "Build/site.data.part0.unityweb?v=20261016-full-fixes-8bbd7f49",
       "bytes": 8388608
     },
     {
-      "url": "Build/site.data.part1.unityweb?v=20261016-audio-fix-bd6e4e5e",
+      "url": "Build/site.data.part1.unityweb?v=20261016-full-fixes-8bbd7f49",
       "bytes": 8388608
     },
     {
-      "url": "Build/site.data.part2.unityweb?v=20261016-audio-fix-bd6e4e5e",
+      "url": "Build/site.data.part2.unityweb?v=20261016-full-fixes-8bbd7f49",
       "bytes": 8388608
     },
     {
-      "url": "Build/site.data.part3.unityweb?v=20261016-audio-fix-bd6e4e5e",
+      "url": "Build/site.data.part3.unityweb?v=20261016-full-fixes-8bbd7f49",
       "bytes": 8388608
     },
     {
-      "url": "Build/site.data.part4.unityweb?v=20261016-audio-fix-bd6e4e5e",
+      "url": "Build/site.data.part4.unityweb?v=20261016-full-fixes-8bbd7f49",
       "bytes": 8388608
     },
     {
-      "url": "Build/site.data.part5.unityweb?v=20261016-audio-fix-bd6e4e5e",
+      "url": "Build/site.data.part5.unityweb?v=20261016-full-fixes-8bbd7f49",
       "bytes": 8388608
     },
     {
-      "url": "Build/site.data.part6.unityweb?v=20261016-audio-fix-bd6e4e5e",
+      "url": "Build/site.data.part6.unityweb?v=20261016-full-fixes-8bbd7f49",
       "bytes": 8388608
     },
     {
-      "url": "Build/site.data.part7.unityweb?v=20261016-audio-fix-bd6e4e5e",
+      "url": "Build/site.data.part7.unityweb?v=20261016-full-fixes-8bbd7f49",
       "bytes": 8388608
     },
     {
-      "url": "Build/site.data.part8.unityweb?v=20261016-audio-fix-bd6e4e5e",
+      "url": "Build/site.data.part8.unityweb?v=20261016-full-fixes-8bbd7f49",
       "bytes": 8388608
     },
     {
-      "url": "Build/site.data.part9.unityweb?v=20261016-audio-fix-bd6e4e5e",
+      "url": "Build/site.data.part9.unityweb?v=20261016-full-fixes-8bbd7f49",
       "bytes": 8388608
     },
     {
-      "url": "Build/site.data.part10.unityweb?v=20261016-audio-fix-bd6e4e5e",
+      "url": "Build/site.data.part10.unityweb?v=20261016-full-fixes-8bbd7f49",
       "bytes": 8388608
     },
     {
-      "url": "Build/site.data.part11.unityweb?v=20261016-audio-fix-bd6e4e5e",
+      "url": "Build/site.data.part11.unityweb?v=20261016-full-fixes-8bbd7f49",
       "bytes": 8388608
     },
     {
-      "url": "Build/site.data.part12.unityweb?v=20261016-audio-fix-bd6e4e5e",
+      "url": "Build/site.data.part12.unityweb?v=20261016-full-fixes-8bbd7f49",
       "bytes": 8388608
     },
     {
-      "url": "Build/site.data.part13.unityweb?v=20261016-audio-fix-bd6e4e5e",
+      "url": "Build/site.data.part13.unityweb?v=20261016-full-fixes-8bbd7f49",
       "bytes": 8388608
     },
     {
-      "url": "Build/site.data.part14.unityweb?v=20261016-audio-fix-bd6e4e5e",
+      "url": "Build/site.data.part14.unityweb?v=20261016-full-fixes-8bbd7f49",
       "bytes": 8388608
     },
     {
-      "url": "Build/site.data.part15.unityweb?v=20261016-audio-fix-bd6e4e5e",
-      "bytes": 171408
+      "url": "Build/site.data.part15.unityweb?v=20261016-full-fixes-8bbd7f49",
+      "bytes": 8388608
+    },
+    {
+      "url": "Build/site.data.part16.unityweb?v=20261016-full-fixes-8bbd7f49",
+      "bytes": 2287693
     }
   ]
 }
